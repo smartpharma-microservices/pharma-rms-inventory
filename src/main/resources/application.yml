@@ -1,0 +1,25 @@
+
+spring:
+  application:
+    name: pharma-rms-inventory 
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://127.0.0.1:5432/smartpharma_database?searchpath=rms_inventory_schema
+    username: postgres
+    password: panchakshari
+  jpa:
+    open-in-view: false
+    hibernate:
+      enable_lazy_load_no_trans: true
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect        
+    show-sql: true   
+server:
+  port: 8086
+  servlet:
+    context-path: /pharma/rms-inventory 
+springdoc:
+  api-docs:
+    path: /pharma/rms-inventory/swagger-ui.html   
